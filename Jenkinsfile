@@ -1,10 +1,19 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('test') {
-            echo 'Testing'
+        stage('Building') {
             steps {
-                sh 'echo Test 1'
+                sh 'echo Building...'
+            }
+        }
+        stage('Testing') {
+            steps {
+                sh 'echo Testing...'
+            }
+        }
+        stage('Deploying') {
+            steps {
+                sh 'echo Deploying...'
             }
         }
     }

@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'phusion/baseimage' }
+    agent { dockerfile true }
     stages {
-        stage('build') {
+        stage('test') {
             steps {
-                sh 'python --version'
+                sh 'echo helpme'
             }
         }
     }

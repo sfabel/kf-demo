@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
+    agent { docker 'phusion/baseimage' }
     stages {
         stage('build') {
             steps {
